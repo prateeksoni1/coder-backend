@@ -25,9 +25,12 @@ app.post("/add-home-card", (req, res) => {
 });
 
 app.get("/home-cards", (req, res) => {
-    mongoose.find().then(products => {
-        res.send(products);
-    });
+    mongoose
+        .find()
+        .then(products => {
+            res.send(products);
+        })
+        .catch(err => res.send(err));
 });
 
 app.get("/", (req, res) => {
