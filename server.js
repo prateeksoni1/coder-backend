@@ -25,8 +25,7 @@ app.post("/add-home-card", (req, res) => {
 });
 
 app.get("/home-cards", (req, res) => {
-    mongoose
-        .find()
+    HomeCard.find()
         .then(products => {
             res.send(products);
         })
