@@ -28,11 +28,11 @@ app.get("/home-cards", (req, res) => {
     HomeCard.find()
         .then(cards => {
             return res
+                .send(cards)
                 .setHeader(
                     "Access-Control-Allow-Origin",
                     "*"
-                )
-                .then(res.send(cards));
+                );
         })
         .catch(err => res.send(err));
 });
