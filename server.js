@@ -20,7 +20,7 @@ app.post("/add-home-card", (req, res) => {
         imageUrl: imageUrl
     });
     homeCard.save().then(product => {
-        console.log(product);
+        res.send(product);
     });
 });
 
