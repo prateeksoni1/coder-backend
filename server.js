@@ -27,10 +27,12 @@ app.post("/add-home-card", (req, res) => {
 app.get("/home-cards", (req, res) => {
     HomeCard.find()
         .then(cards => {
-            res.setHeader(
-                "Access-Control-Allow-Origin",
-                "*"
-            ).send(cards);
+            return res
+                .setHeader(
+                    "Access-Control-Allow-Origin",
+                    "*"
+                )
+                .send(cards);
         })
         .catch(err => res.send(err));
 });
