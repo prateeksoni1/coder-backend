@@ -45,7 +45,7 @@ const PORT = process.env.PORT || 3333;
 
 mongoose
     .connect(
-        "mongodb+srv://pro:gFS54tqYmrHhvuEV@cluster0-v7rdd.mongodb.net/test?retryWrites=true",
+        "mongodb+srv://pro:1234@cluster0-v7rdd.mongodb.net/test?retryWrites=true",
         {
             useNewUrlParser: true
         }
