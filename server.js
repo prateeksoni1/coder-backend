@@ -12,12 +12,12 @@ app.set("view engine", "ejs");
 app.post("/add-home-card", (req, res) => {
     const title = req.body.title;
     const url = req.body.url;
-    const imageUrl = req.body.imageUrl;
+    const bg = req.body.bg;
 
     const homeCard = new HomeCard({
         title: title,
         url: url,
-        imageUrl: imageUrl
+        bg: bg
     });
     homeCard.save().then(card => {
         res.send(card);
