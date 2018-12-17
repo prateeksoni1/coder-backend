@@ -9,7 +9,7 @@ route.get("/cpp", (req, res) => {
   });
 });
 
-route.post("/add-topic", (req, res) => {
+route.post("/cpp/add-topic", (req, res) => {
   const name = req.body.name;
   const url = req.body.url;
   const topic = new Topic({
