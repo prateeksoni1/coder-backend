@@ -12,8 +12,9 @@ route.get("/cpp", (req, res) => {
 route.post("/add-topic", (req, res) => {
   const name = req.body.name;
   const url = req.body.url;
+  const type = req.query.id;
   const topic = new Topic({
-    type: req.params.type,
+    type: type,
     name: name,
     url: url
   });
